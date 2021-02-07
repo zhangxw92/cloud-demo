@@ -1,0 +1,23 @@
+
+server:
+  port: 9001
+
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      label: master #分支
+      name: config #配置文件名称
+      profile: dev #后缀名称
+      uri: http://localhost:8200 #配置中心地址
+
+eureka:
+  instance:
+    hostname: order
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
