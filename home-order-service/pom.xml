@@ -39,7 +39,14 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-context</artifactId>
         </dependency>
+
         <!--将application.yml修改为bootstrap.yml后需要添加bootstrap依赖 end-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>2.4.2</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
