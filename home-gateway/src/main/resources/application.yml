@@ -16,7 +16,7 @@ spring:
          predicates:
           - Path=/hello # 断言，路径相匹配的进行路由
 
-
+spring.redis.cl
 eureka:
   instance:
     hostname: home-gateway-service

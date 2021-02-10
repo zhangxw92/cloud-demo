@@ -29,4 +29,14 @@ spring:
           uri: lb://order
           predicates:
             - Path=/hello/**
-
+  redis:
+    host: 39.102.61.252
+    port: 6379
+    database: 0
+    password:
+    lettuce:
+      pool:
+        max-active: 8 #最大连接数
+        max-idle: 8 #最大连接阻塞等待事件
+        max-wait: -1 #最大空闲连接
+        min-idle: 0 #最小空闲连接
