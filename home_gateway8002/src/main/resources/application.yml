@@ -29,6 +29,18 @@ spring:
           uri: lb://order
           predicates:
             - Path=/hello/**
+          #filters: #限流过滤器
+          #  - name: RequestRateLimiter
+          #    args:
+          #      redis-rate-limiter.replenishRate: 1 #令牌桶每秒填充速率
+          #      redis-rate-limiter.burstCapacity: 1 #令牌桶总容量
+          #      key-resolver: "#{@keyResolver}" #使用spel 表达式按名称引用bean
+          filters:
+          - name: RequestRateLimiter
+            args:
+              key-resolver: '#{@ipKeyResolver}'
+              redis-rate-limiter.replenishRate: 2
+              redis-rate-limiter.burstCapacity: 10
   redis:
     host: 39.102.61.252
     port: 6379

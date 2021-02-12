@@ -17,10 +17,11 @@ public class TokenFilter implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         System.out.println(exchange);
         System.out.println(chain);
-        List<String> name = exchange.getRequest().getQueryParams().get("name");
-        if (name == null || name.size() == 0) {
-            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-            return exchange.getResponse().setComplete();
+        List<String> token = exchange.getRequest().getQueryParams().get("token");
+        if (token == null || token.size() == 0) {
+//            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
+//            return exchange.getResponse().setComplete();
+            return chain.filter(exchange);
         }
         return chain.filter(exchange);
     }
