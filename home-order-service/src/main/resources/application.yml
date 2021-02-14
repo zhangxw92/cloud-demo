@@ -16,6 +16,7 @@ eureka:
   instance:
     hostname: order
     prefer-ip-address: true
+    instance-id: order2
   client:
     register-with-eureka: true
     fetch-registry: true
