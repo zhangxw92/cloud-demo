@@ -11,11 +11,11 @@ public class PaymentAction implements PaymentActionService {
 
     @Override
     public String hello(@PathVariable("id") String id) {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            //Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return "Hello World :" + id;
     }
 

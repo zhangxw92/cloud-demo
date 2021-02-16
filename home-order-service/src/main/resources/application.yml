@@ -32,5 +32,10 @@ feign:
   circuitbreaker:
     enabled: true
 
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
 
 #暴露监控端点
+
+
