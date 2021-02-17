@@ -1,3 +1,4 @@
+/*
 package com.athome.lb;
 
 import org.springframework.cloud.client.ServiceInstance;
@@ -17,11 +18,13 @@ public class RoundLoadBanlance implements LoadBanlace {
         return list.get(i);
     }
 
-    /**
+    */
+/**
      * 统计执行的次数
      *
      * @return
-     */
+     *//*
+
     public final int getCount() {
         int current;
         int next;
@@ -39,3 +42,4 @@ public class RoundLoadBanlance implements LoadBanlace {
         System.out.println(Integer.MIN_VALUE);
     }
 }
+*/
